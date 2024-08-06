@@ -5,10 +5,10 @@ using namespace std;
 
 int main() {
     map<int,string>m;
-    m[1]="Goddess";
-    m[4]="Everything";
+    m[1]="hey";
+    m[4]="hi";
     m[3]="is";
-    m[2]="Versona";
+    m[2]="hello";
 
     m.insert( {5,"to me"} );
     
