@@ -99,6 +99,7 @@ Node* floydDetectAlgo(Node * head){
     
 }
 
+//finds starting of loop in LL
 Node* getStartingNode(Node* head){
     if (head==NULL)
     {
@@ -116,6 +117,17 @@ Node* getStartingNode(Node* head){
     
 }
 
+void removeloop(Node* head){
+    Node* startofLoop= getStartingNode(head);
+    Node* temp;
+    while (temp->next!=startofLoop)
+    {
+        temp=temp->next;
+    }
+    temp->next=NULL;
+    
+}
+
 int main()
 {
 
@@ -128,7 +140,7 @@ int main()
     print(head);
     Node* test= head->next->next;
     tail->next=test;
-    cout<<endl<<floydDetectAlgo(head);
+    // cout<<endl<<floydDetectAlgo(head);
     cout<<endl<<getStartingNode(head)->data;
 
 
